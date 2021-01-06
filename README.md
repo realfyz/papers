@@ -1,6 +1,10 @@
 # Papers
+<<<<<<< HEAD
 
 Papers is an open-source and web-based reference manager. Papers's address is [@realfyz/papers](https://www.github.com/).
+=======
+Papers is an open-source and web-based reference manager. Papers's address is [@realfyz/papers](https://github.com/realfyz/papers/).
+>>>>>>> 6f8bbdea92e1637c8fdc3a93fcb8b4142b0d3e9e
 
 ## Papers looks like...
 
@@ -13,13 +17,13 @@ Papers is an open-source and web-based reference manager. Papers's address is [@
 Download the source code by:
 
 ```shell
-git clone https://github.com/fangyaozheng/papers
+git clone https://github.com/realfyz/papers.git
 ```
 
 then:
 
 ```shell
-cd papers/
+cd papers/src/
 python3 main.py
 ```
 
