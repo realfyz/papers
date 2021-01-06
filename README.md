@@ -12,7 +12,7 @@ git clone https://github.com/fangyaozheng/papers
 then:
 
 ```shell
-cd papers/
+cd papers/src/
 python3 main.py
 ```
 
