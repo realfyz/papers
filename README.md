@@ -1,5 +1,12 @@
 # Papers
+
 Papers is an open-source and web-based reference manager. Papers's address is [@realfyz/papers](https://www.github.com/).
+
+## Papers looks like...
+
+![pic1](./pic1.png)
+
+![pic1](./pic2.png)
 
 ## Self-hosted
 
