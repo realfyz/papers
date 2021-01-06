@@ -6,7 +6,7 @@ Papers is an open-source and web-based reference manager. Papers's address is [@
 Download the source code by:
 
 ```shell
-git clone https://github.com/realfyz/papers/
+git clone https://github.com/realfyz/papers.git
 ```
 
 then:
