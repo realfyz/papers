@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/primer/primer.css') }}">
+    <link href="{{ url_for('static', filename='/images/logo.svg') }}" rel="icon" type="image/x-ico">
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/jq.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <title>关于 - Papers - Contributed by Yaozheng Fang</title>
+</head>
+<style>
+    .wrapper {
+        padding-top: 2em;
+        margin: 0 22% 1em 22%;
+        width: 56%;
+    }
+</style>
+<body>
+
+{% include 'header.html' %}
+
+<div class="wrapper">
+    <div class="flash mt-3 flash-warn">
+        This paper is edited by <a>@fangyaozheng</a> 3 hours ago.
+      </div>
+    <article class="markdown-body pt-6">
+        {% filter markdown %}
+            {{ text }}
+        {% endfilter %}
+    </article>
+    {% include 'footer.html' %}
+</div>
+
+
+</body>
+</html>

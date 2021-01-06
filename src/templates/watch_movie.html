@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/primer/primer.css') }}">
+    <link href="{{ url_for('static', filename='/images/logo.svg') }}" rel="icon" type="image/x-ico">
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/jq.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <title>{{ name }} - Contributed by Yaozheng Fang</title>
+</head>
+
+<body>
+
+{% include 'header.html' %}
+
+<div class="container col-12 pt-6">
+    <style>
+        video{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <video controls="controls">
+        <source src='{{ path }}'>
+    </video>
+</div>
+
+<div class="container-lg col-12 pt-6">
+    {% include 'footer.html' %}
+</div>
+
+</body>
+</html>

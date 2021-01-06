@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/primer/primer.css') }}">
+    <link href="{{ url_for('static', filename='/images/logo.svg') }}" rel="icon" type="image/x-ico">
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/jq.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+      .points{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    </style>
+    <title>{{ username }}的文章列表 - Papers - Contributed by Yaozheng Fang</title>
+</head>
+
+<body>
+
+{% include 'header.html' %}
+
+<div class="container-lg clearfix col-12 d-flex mt-6">
+    <div class="col-md-12 mr-2">
+        <button class="btn btn-primary mr-2" type="button" onclick="window.open('/{{ username }}/new')">添加文献</button>
+        <button class="btn mr-2" type="button" onclick="window.location.replace('/{{ username }}/')">刷新</button>
+        <!-- Paper table -->
+        <div class="Box" style="margin-top: 1em">
+            <div class="Box-header Box-header--blue">
+                <div class="TableObject">
+                    <div class="TableObject-item TableObject-item--primary">
+                        <input
+                                class="input-block form-control"
+                                type="text"
+                                placeholder="关键字搜索"
+                                aria-label="Long elastic input form"
+                        />
+                    </div>
+                    <div class="TableObject-item">
+                        <button class="btn ml-2" type="button">搜索</button>
+                    </div>
+                </div>
+            </div>
+            {% for k in papers %}
+            <div class="Box-body py-2 d-flex col-12" style="align-items:center;">
+                <div class="flex-auto col-4 text-left points">
+                    <a href="#" class="link-gray-dark" onclick=window.open('/read/'+{{ k[0] }})>{{ k[2] }}</a>
+                </div>
+                <!--
+                -->
+                <div class="flex-auto col-6 text-gray-light text-left points">
+                    {{ k[4] }}
+                </div>
+                <!--
+                -->
+                <div class="flex-auto col-1 text-gray-light text-right points">
+                    {{ k[3] }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <!-- Paper end -->
+    </div>
+</div>
+
+<div class="container-lg clearfix col-12 d-flex mt-3">
+{% include 'footer.html' %}
+</div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/primer/primer.css') }}">
+    <link href="{{ url_for('static', filename='/images/logo.svg') }}" rel="icon" type="image/x-ico">
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/jq.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style type="text/css">
+  .wrapper{
+    padding: 2em 22% 0 22%;
+  }
+</style>
+    <script>
+        function explain(){
+            alert("我们可以帮助你解析PDF文档，生成最佳的论文名称。");
+        }
+    </script>
+<title>添加新文章 - Papers - Contributed by Yaozheng Fang</title>
+</head>
+
+<body>
+
+{% include 'header.html' %}
+
+<div class="wrapper">
+
+  <div class="Subhead">
+    <div class="Subhead-heading"><strong>{{ username }} 正在添加文章</strong></div>
+  </div>
+
+
+  <form method="post" enctype="multipart/form-data" action="/{{ username }}/new">
+    <div class="form-group">
+      <div class="form-group-header">
+        <label for="example-textarea">描述</label>
+      </div>
+      <div class="form-group-body">
+        <textarea class="form-control" id="example-textarea" name="desc"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-group-header">
+        <label for="example-textarea-2">引用(建议使用Bib格式)</label>
+      </div>
+      <div class="form-group-body">
+        <textarea class="form-control" id="example-textarea-2" name="cite"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-group-body">
+        <label> <input type="checkbox" /> 请帮我解析论文名称 </label>
+        <span class="Label mr-1 Label--orange" style="cursor:hand" onclick="explain()">这是什么？</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-group-body">
+        <input type="file" name="file" />
+      </div>
+    </div>
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">提交至数据库</button>
+      <button type="button" class="btn">退出</button>
+    </div>
+  </form>
+</div>
+
+</body>
+
+</html>

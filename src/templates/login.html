@@ -1,0 +1,67 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/primer/primer.css') }}">
+    <link href="{{ url_for('static', filename='/images/logo.svg') }}" rel="icon" type="image/x-ico">
+    <script type="text/javascript" src="{{ url_for('static', filename='/js/jq.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        .wrapper{
+            margin-top: 4em;
+        }
+    </style>
+    <script>
+      function login(){
+            const temp = document.getElementById("loginform");
+            temp.submit();
+      }
+    </script>
+    <title>用户登录 - Papers - Contributed by Yaozheng Fang</title>
+</head>
+<body>
+
+{% include 'header.html' %}
+
+<div class="wrapper">
+    <div class="col-3 mx-auto">
+      <div class="Box box-shadow">
+        <div class="Box-row">
+          <h3 class="m-0 text-center">用户登录</h3>
+        </div>
+        <div class="Box-row">
+          <form method="POST" id="loginform" action="/login">
+            <div class="form-group">
+              <div class="form-group-header">
+                <label>用户名</label>
+              </div>
+              <div class="form-group-body">
+                <input class="form-control" type="text" name="username" autocomplete="off" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-group-header">
+                <label>密码</label>
+              </div>
+            <div class="form-group-body">
+              <input class="form-control" type="password" name="password" autocomplete="off" />
+            </div>
+          </div>
+          </form>
+        </div>
+        <div class="Box-row">
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="login()">登录</button>
+            <button type="button" class="btn" onclick=window.location.replace("/register")>注册为新用户</button>
+          </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container-lg col-12 pt-6">
+  {% include 'footer.html' %}
+</div>
+
+</body>
+
+</html>
