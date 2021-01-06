@@ -1,6 +1,6 @@
 # Papers
 
-Papers is an open-source and web-based reference manager. Papers's address is [@realfyz/papers](https://github.com/realfyz/papers/).
+Papers is an open-source and flask-based reference manager. Papers's address is [@realfyz/papers](https://github.com/realfyz/papers/).
 ## Papers looks like...
 
 ![pic1](./pic1.png)
@@ -58,7 +58,7 @@ Papers基于B/S架构，提供轻量级部署和数据浏览。它的组件都�
 
 ### A. Frontend
 
-- Primer CSS @plung/primer
+- Primer CSS [@primer/css](https://github.com/primer/css)
 
 ### B. Backend
 
